@@ -1,0 +1,34 @@
+.cardClock { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+    background: linear-gradient(
+        rgba(0,0,0,0.05), 
+        rgba(0,0,0,0.05)),
+        url('../../assets/weather/weather.jpg'
+    );
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0,0,0,0.5);
+    text-align: right;
+    padding: 40px 20px 10px 20px;
+    border-radius: 5px;
+    min-height: 200px;
+}
+
+.cardClock > p {
+    font-size: 20px;
+}
+
+.cardClock > h1 {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.cardClock > p,
+.cardClock > h1 {
+    color: white;
+    margin: 0px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
