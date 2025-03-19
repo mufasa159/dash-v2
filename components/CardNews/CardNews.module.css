@@ -1,0 +1,47 @@
+.newsDisplay {
+    border-radius: 0px 0px 8px 8px;
+    background-color: var(--secondary-background);
+    padding: 10px 30px;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.newsDisplay > a {
+    text-decoration: none;
+    color: var(--foreground);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.newsDisplay > a:hover {
+    border-left: 10px solid var(--blue);
+}
+
+.newsDisplay > a:hover .thumbnail {
+    margin-left: 3px;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.newsDisplay > p {
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.newsDisplay > a > div > small {
+    color: var(--gray);
+}
+
+.newsImage > .thumbnail {
+    display: block;
+    width: 80px;
+    border-radius: 5px;
+    min-height: 65px;
+    max-height: 80px;
+    height: 100%;
+    object-fit: cover;
+    margin-right: 15px;
+    transition: 0.3s;
+}

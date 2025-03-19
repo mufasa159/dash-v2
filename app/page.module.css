@@ -7,6 +7,16 @@
     column-gap: 15px;
 }
 
+.widget {
+    page-break-inside: avoid;
+    margin: 0px 0px 15px 0px;
+    max-width: calc(100vw / 3);
+    height: auto;
+    font-family: var(--font-geist-sans);
+    border: 1px solid var(--dark-gray);
+    border-radius: 8px;
+}
+
 @media only screen and (max-width: 768px) {
     .widgetRow {
         -webkit-column-count: 1;
@@ -16,13 +26,8 @@
         column-count: 1;
         column-gap: 15px;
     }
-}
 
-.widget {
-    page-break-inside: avoid;
-    margin: 0px 0px 15px 0px;
-    max-width: 500px;
-    height: auto;
-    font-family: var(--font-geist-sans);
-    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    .widget {
+        max-width: 100%;
+    }
 }

@@ -1,0 +1,64 @@
+.spotifyDisplay {
+    border-radius: 0px 0px 8px 8px;
+    background-color: var(--secondary-background);
+    padding: 0px 30px 30px 30px;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.track {
+   width: calc(100% / 4 - 10px);
+   overflow: hidden;
+}
+
+.track:hover > a > .coverArt {
+    border-bottom: 2px solid var(--green);
+    border-radius: 4px 4px 0px 0px;
+}
+
+.track:hover > .text > .title > a {
+    color: var(--green);
+    font-weight: 500;
+}
+
+.track > a > .coverArt {
+    border-bottom: 2px solid var(--background);
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    height: auto;
+    border-radius: 4px;
+    transition: 0.1s;
+    object-fit: cover;
+}
+
+.track > .text {
+    width: 100%;
+}
+
+.track > .text > a,
+.track > .text > small {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.track > .text > small {
+    color: var(--gray);
+}
+
+.track > .text > .title {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.track > .text > .title > a {
+    text-decoration: none;
+    color: var(--foreground);
+    transition: 0.3s;
+    font-size: 12px;
+}

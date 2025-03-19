@@ -28,7 +28,7 @@
 
 .cardClock > p,
 .cardClock > h1 {
-    color: white;
+    color: var(--white);
     margin: 0px;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }

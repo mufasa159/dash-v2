@@ -1,0 +1,72 @@
+.habitsDisplay {
+    border-radius: 0px 0px 8px 8px;
+    background-color: var(--secondary-background);
+    padding: 0px 30px 20px;
+    margin: 0;
+}
+
+.habitsDisplay > h4 {
+    color: var(--foreground);
+    margin: 0px 0px 10px 0px;
+}
+
+.habitsDisplay > .habits {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    margin: 0px 0px 6px 0px;
+}
+
+.habitsDisplay > .habits > .left {
+    float: left;
+    width: 70%;
+}
+
+.left > p {
+    margin: 0;
+    color: var(--foreground);
+    font-size: 14px;
+    width: 100%;
+    transition: 0.2s;
+}
+
+.left > small {
+    color: var(--gray);
+    margin: 0;
+    padding: 0;
+}
+
+.habitsDisplay > .habits > .right {
+    width: 30%;
+    float: right;
+    text-align: right;
+}
+
+.habitsDisplay button {
+    padding: 0;
+    color: var(--orange);
+    background-color: var(--secondary-background);
+    border: 1px solid var(--secondary-background);
+    outline: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.habitsDisplay button:hover {
+    padding-right: 10px;
+    border-right: 3px solid var(--orange);
+}
+
+.habitsDisplay button.completed,
+.habitsDisplay button.completed:hover {
+    background-color: none;
+    border: none;
+    color: var(--green);
+    cursor: default;
+    padding: 0;
+}
+
+.habitsDisplay a {
+    text-decoration: none;
+    color: var(--orange);
+}

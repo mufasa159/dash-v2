@@ -1,0 +1,25 @@
+.quotesDisplay {
+    border-radius: 0px 0px 8px 8px;
+    background-color: var(--secondary-background);
+    padding: 0px 30px 20px;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+.quotesDisplay > div > p {
+    font-size: 20px;
+    color: var(--foreground);
+    padding: 0;
+    margin: 0px 0px 10px 0px;
+}
+
+.quotesDisplay > div > small {
+    color: var(--gray);
+}
+
+.quotesDisplay > .author {
+    color: var(--yellow);
+    text-align: right;
+    float: right;
+    padding-right: 12px;
+}

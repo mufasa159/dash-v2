@@ -1,7 +1,7 @@
-'use client';
+'use client'
 
-import React, { useState, useEffect } from 'react';
-import styles from './CardClock.module.css';
+import React, { useState, useEffect } from 'react'
+import styles from './CardClock.module.css'
 
 const CardClock: React.FC = () => {
     const [currentTime, setCurrentTime] = useState<Date | null>(null);
