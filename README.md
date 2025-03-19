@@ -4,8 +4,6 @@ Web-based dashboard containing a variety of visualizations and
 interactive elements for personal data tracking, analysis and
 monitoring.
 
-https://github.com/user-attachments/assets/0c0d96d9-9fa2-449c-8456-6db878186ada
-
 This is an improved version of one of my archived projects from
 2021 when I was relatively new to NextJS. The original repositories
 can be found at the links below:  
@@ -18,6 +16,7 @@ can be found at the links below:
 ## Table of Contents
 
 - [Project Structure](#project-structure)
+- [Demo](#demo)
 - [Local Environment Setup](#local-environment-setup)
 - [License](#license)
 
@@ -44,6 +43,12 @@ directory. since it's a relatively small project and I wanted to avoid
 unnecessary dependencies,the migration files are generated manually.
 Ideally they'd be generated automatically through tools like
 [Prisma](https://www.prisma.io/).
+
+
+
+## Demo
+
+https://github.com/user-attachments/assets/489eb225-8a0b-48ba-bc39-519b4223c379
 
 
 
