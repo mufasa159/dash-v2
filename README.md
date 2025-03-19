@@ -69,15 +69,14 @@ below:
 | `PG_*`                  | Leave as-is unless using an external database outside Docker. |
 | `NEWS_API_KEY`          | Register at [NewsAPI](https://newsapi.org/register) and copy your API key |
 | `TSS_QUOTE_API_KEY`     | Register at [TheySaidSo](https://theysaidso.com/register) and copy your Quote API key |
-| `SPOTIFY_CLIENT_ID`     | Create an app on [Spotify for Developers](https://developer.spotify.com/dashboard/), then copy the `Client ID` from the app's settings. |
-| `SPOTIFY_CLIENT_SECRET` | Retrieve the `Client Secret` from your app on [Spotify for Developers](https://developer.spotify.com/dashboard/). |
+| `SPOTIFY_CLIENT_ID`     | Create an app on [Spotify for Developers](https://developer.spotify.com/dashboard/), then retrieve the`Client ID` and `Client Secret` from your app |
 | `NEXTAUTH_SECRET`       | Generate a random string and use it as the secret for NextAuth | 
 
 
 Run the following command to start the development environment:
 
 ```bash
-docker-compose up --build
+PG_U=postgres PG_P=password docker-compose up --build
 ```
 
 The project will be available at http://localhost:3000
