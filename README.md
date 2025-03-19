@@ -4,6 +4,8 @@ Web-based dashboard containing a variety of visualizations and
 interactive elements for personal data tracking, analysis and
 monitoring.
 
+https://github.com/user-attachments/assets/0c0d96d9-9fa2-449c-8456-6db878186ada
+
 This is an improved version of one of my archived projects from
 2021 when I was relatively new to NextJS. The original repositories
 can be found at the links below:  
@@ -38,13 +40,10 @@ file.
 `components` directory.
 
 - The schema files for the database is stored in the `database`
-directory with all the migration files stored in the 
-`database/migrations` directory. Note that, for now, the migration
-files are generated manually -- I type them out myself. Ideally they
-will be generated automatically through tools like
-[Prisma](https://www.prisma.io/), but since it's a relatively small
-project and I was planning to avoid unnecessary dependencies, I
-decided to do it manually.
+directory. since it's a relatively small project and I wanted to avoid
+unnecessary dependencies,the migration files are generated manually.
+Ideally they'd be generated automatically through tools like
+[Prisma](https://www.prisma.io/).
 
 
 
