@@ -22,8 +22,6 @@ services:
       POSTGRES_USER: ${PG_U}
       POSTGRES_PASSWORD: ${PG_P}
       POSTGRES_DB: dash
-    ports:
-      - '5432:5432'
 
 volumes:
   dash_db:

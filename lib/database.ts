@@ -196,6 +196,6 @@ export async function initializeDB(): Promise<void> {
     }
 }
 
-initializeDB().catch(console.error);
+await initializeDB().catch(console.error);
 
 export default pool;
