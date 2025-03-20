@@ -62,6 +62,12 @@ const Habits = () => {
         name: string,
         description: string
     ) {
+        if (!id) {
+            setStatusColor('var(--red)')
+            setStatus("Please select a habit to update.")
+            return
+        }
+
         try {
             const res = await fetch('/api/habits', {
                 method: 'PUT',
@@ -137,6 +143,11 @@ const Habits = () => {
 
 
     async function deleteHabit(id: number) {
+        if (!id) {
+            setStatusColor('var(--red)')
+            setStatus("Please select a habit to delete.")
+            return
+        }
         try {
             const res = await fetch('/api/habits', {
                 method: 'DELETE',
@@ -245,83 +256,87 @@ const Habits = () => {
                 </form>
 
                 {/* update form */}
-                <form
-                    className={styles.habitForm}
-                    onSubmit={e => handleFormSubmit(e, 'update')}
-                >
-                    <h2 style={{ color: 'var(--yellow)' }}>Update</h2>
-
-                    <select onChange={e => setFormDataUpdate({
-                        id: parseInt(e.target.value),
-                        name: habits.find(
-                            habit => habit.id === parseInt(e.target.value)
-                        )?.name || '',
-                        description: habits.find(
-                            habit => habit.id === parseInt(e.target.value)
-                        )?.description || ''
-                    })}>
-                        <option value='' disabled>Select Habit</option>
-                        {habits.map(habit => (
-                            <option key={habit.id} value={habit.id}>{habit.name}</option>
-                        ))}
-                    </select>
-
-                    <input
-                        type='text'
-                        name='name'
-                        id='name'
-                        placeholder='Title'
-                        maxLength={40}
-                        value={formDataUpdate.name}
-                        onChange={e => setFormDataUpdate({
-                            ...formDataUpdate,
-                            name: e.target.value
-                        })}
-                    />
-
-                    <textarea
-                        name='description'
-                        id='description'
-                        placeholder='Short Description'
-                        maxLength={255}
-                        value={formDataUpdate.description}
-                        onChange={e => setFormDataUpdate({
-                            ...formDataUpdate,
-                            description: e.target.value
-                        })}
-                    />
-
-                    <button
-                        style={{ backgroundColor: 'var(--yellow)'}}
-                        type='submit'
+                {habits.length !== 0 && (
+                    <form
+                        className={styles.habitForm}
+                        onSubmit={e => handleFormSubmit(e, 'update')}
                     >
-                        UPDATE
-                    </button>
-                </form>
+                        <h2 style={{ color: 'var(--yellow)' }}>Update</h2>
+
+                        <select onChange={e => setFormDataUpdate({
+                            id: parseInt(e.target.value),
+                            name: habits.find(
+                                habit => habit.id === parseInt(e.target.value)
+                            )?.name || '',
+                            description: habits.find(
+                                habit => habit.id === parseInt(e.target.value)
+                            )?.description || ''
+                        })}>
+                            <option value=''>Select Habit</option>
+                            {habits.map(habit => (
+                                <option key={habit.id} value={habit.id}>{habit.name}</option>
+                            ))}
+                        </select>
+
+                        <input
+                            type='text'
+                            name='name'
+                            id='name'
+                            placeholder='Title'
+                            maxLength={40}
+                            value={formDataUpdate.name}
+                            onChange={e => setFormDataUpdate({
+                                ...formDataUpdate,
+                                name: e.target.value
+                            })}
+                        />
+
+                        <textarea
+                            name='description'
+                            id='description'
+                            placeholder='Short Description'
+                            maxLength={255}
+                            value={formDataUpdate.description}
+                            onChange={e => setFormDataUpdate({
+                                ...formDataUpdate,
+                                description: e.target.value
+                            })}
+                        />
+
+                        <button
+                            style={{ backgroundColor: 'var(--yellow)'}}
+                            type='submit'
+                        >
+                            UPDATE
+                        </button>
+                    </form>
+                )}
 
                 {/* delete form */}
-                <form
-                    className={styles.habitForm}
-                    onSubmit={e => handleFormSubmit(e, 'delete')}
-                >
-                    <h2 style={{ color: 'var(--red)' }}>Delete</h2>
-
-                    <select onChange={e => setFormDataDelete({
-                        id: parseInt(e.target.value)
-                    })}>
-                        <option value='' disabled>Select Habit</option>
-                        {habits.map(habit => (
-                            <option key={habit.id} value={habit.id}>{habit.name}</option>
-                        ))}
-                    </select>
-
-                    <button
-                        style={{ backgroundColor: 'var(--red)'}}
-                        type='submit'
+                {habits.length !== 0 && (
+                    <form
+                        className={styles.habitForm}
+                        onSubmit={e => handleFormSubmit(e, 'delete')}
                     >
-                        DELETE
-                    </button>
-                </form>
+                        <h2 style={{ color: 'var(--red)' }}>Delete</h2>
+
+                        <select onChange={e => setFormDataDelete({
+                            id: parseInt(e.target.value)
+                        })}>
+                            <option value=''>Select Habit</option>
+                            {habits.map(habit => (
+                                <option key={habit.id} value={habit.id}>{habit.name}</option>
+                            ))}
+                        </select>
+
+                        <button
+                            style={{ backgroundColor: 'var(--red)'}}
+                            type='submit'
+                        >
+                            DELETE
+                        </button>
+                    </form>
+                )}
             </div>
         </div>
     )
